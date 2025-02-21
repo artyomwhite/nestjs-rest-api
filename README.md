@@ -26,16 +26,13 @@
    ```bash
    git clone https://github.com/yourusername/nestjs-rest-api.git
    cd nestjs-rest-api
+   
 2. Установите зависимости:
 
-bash
-Copy
-npm install
+bash: npm install
 
 3.Создайте файл .env в корне проекта и настройте переменные окружения:
 
-env
-Copy
 DATABASE_HOST=localhost
 DATABASE_PORT=3306
 DATABASE_USER=root
@@ -48,8 +45,6 @@ REFRESH_TOKEN_EXPIRATION=7d
 
 4.Запустите проект:
 
-bash
-Copy
 npm run start
 
 5. Откройте Swagger UI для тестирования API:
