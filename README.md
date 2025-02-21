@@ -21,45 +21,42 @@
 
 ## Установка и запуск
 
-1. Клонируйте репозиторий:
+> **1. Клонируйте репозиторий:**
+> ```bash
+> git clone https://github.com/yourusername/nestjs-rest-api.git
+> cd nestjs-rest-api
+> ```
 
-   ```bash
-   git clone https://github.com/yourusername/nestjs-rest-api.git
-   cd nestjs-rest-api
-   
-2. Установите зависимости:
+> **2. Установите зависимости:**
+> ```bash
+> npm install
+> ```
 
-bash: npm install
+> **3. Создайте файл `.env` в корне проекта и настройте переменные окружения:**
+> ```env
+> DATABASE_HOST=localhost
+> DATABASE_PORT=3306
+> DATABASE_USER=root
+> DATABASE_PASSWORD=yourpassword
+> DATABASE_NAME=nestjs_db
+> JWT_SECRET=your_jwt_secret
+> JWT_EXPIRATION=1h
+> REFRESH_TOKEN_SECRET=your_refresh_token_secret
+> REFRESH_TOKEN_EXPIRATION=7d
+> ```
 
-3.Создайте файл .env в корне проекта и настройте переменные окружения:
+> **4. Запустите проект:**
+> ```bash
+> npm run start
+> ```
 
-DATABASE_HOST=localhost
-DATABASE_PORT=3306
-DATABASE_USER=root
-DATABASE_PASSWORD=yourpassword
-DATABASE_NAME=nestjs_db
-JWT_SECRET=your_jwt_secret
-JWT_EXPIRATION=1h
-REFRESH_TOKEN_SECRET=your_refresh_token_secret
-REFRESH_TOKEN_EXPIRATION=7d
+> **5. Откройте Swagger UI для тестирования API:**
+> [http://localhost:3000/api](http://localhost:3000/api)
 
-4.Запустите проект:
+## Основные маршруты API
 
-npm run start
-
-5. Откройте Swagger UI для тестирования API:
-
-http://localhost:3000/api
-
-
-Основные маршруты API
-
-POST /auth/register: Регистрация пользователя.
-
-POST /auth/login: Авторизация и получение токенов.
-
-POST /auth/refresh: Обновление Access токена.
-
-GET /posts: Получение списка постов (защищенный маршрут).
-
-GET /external/posts: Получение и сохранение постов из внешнего API.
+- **POST /auth/register**: Регистрация пользователя.
+- **POST /auth/login**: Авторизация и получение токенов.
+- **POST /auth/refresh**: Обновление Access токена.
+- **GET /posts**: Получение списка постов (защищенный маршрут).
+- **GET /external/posts**: Получение и сохранение постов из внешнего API.
